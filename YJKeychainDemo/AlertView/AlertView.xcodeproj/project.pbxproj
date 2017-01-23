@@ -15,8 +15,8 @@
 		F81217951E1E400B0082EFFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81217931E1E400B0082EFFF /* LaunchScreen.storyboard */; };
 		F81217A01E1E400B0082EFFF /* AlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F812179F1E1E400B0082EFFF /* AlertViewTests.m */; };
 		F81217AB1E1E400B0082EFFF /* AlertViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F81217AA1E1E400B0082EFFF /* AlertViewUITests.m */; };
-		F8295E921E30C4E800D29AFC /* YJKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F8295E911E30C4E800D29AFC /* YJKeyChain.m */; };
 		F89F72541E3204FA00E6A292 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F89F72531E3204FA00E6A292 /* UserInfo.m */; };
+		F8C593441E334BAF006887A9 /* YJKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C593431E334BAF006887A9 /* YJKeyChain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +53,11 @@
 		F81217A61E1E400B0082EFFF /* AlertViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81217AA1E1E400B0082EFFF /* AlertViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertViewUITests.m; sourceTree = "<group>"; };
 		F81217AC1E1E400B0082EFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8295E901E30C4E800D29AFC /* YJKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJKeyChain.h; sourceTree = "<group>"; };
-		F8295E911E30C4E800D29AFC /* YJKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJKeyChain.m; sourceTree = "<group>"; };
 		F8295E961E30C62600D29AFC /* AlertView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlertView.entitlements; sourceTree = "<group>"; };
 		F89F72521E3204FA00E6A292 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		F89F72531E3204FA00E6A292 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		F8C593421E334BAF006887A9 /* YJKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJKeyChain.h; sourceTree = "<group>"; };
+		F8C593431E334BAF006887A9 /* YJKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJKeyChain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				F8295E961E30C62600D29AFC /* AlertView.entitlements */,
+				F8C593411E334BAF006887A9 /* DependFile */,
 				F89F72521E3204FA00E6A292 /* UserInfo.h */,
 				F89F72531E3204FA00E6A292 /* UserInfo.m */,
-				F8295E901E30C4E800D29AFC /* YJKeyChain.h */,
-				F8295E911E30C4E800D29AFC /* YJKeyChain.m */,
 				F81217881E1E400B0082EFFF /* AppDelegate.h */,
 				F81217891E1E400B0082EFFF /* AppDelegate.m */,
 				F812178B1E1E400B0082EFFF /* ViewController.h */,
@@ -150,6 +149,15 @@
 				F81217AC1E1E400B0082EFFF /* Info.plist */,
 			);
 			path = AlertViewUITests;
+			sourceTree = "<group>";
+		};
+		F8C593411E334BAF006887A9 /* DependFile */ = {
+			isa = PBXGroup;
+			children = (
+				F8C593421E334BAF006887A9 /* YJKeyChain.h */,
+				F8C593431E334BAF006887A9 /* YJKeyChain.m */,
+			);
+			path = DependFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,11 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8295E921E30C4E800D29AFC /* YJKeyChain.m in Sources */,
 				F812178D1E1E400B0082EFFF /* ViewController.m in Sources */,
 				F812178A1E1E400B0082EFFF /* AppDelegate.m in Sources */,
 				F89F72541E3204FA00E6A292 /* UserInfo.m in Sources */,
 				F81217871E1E400B0082EFFF /* main.m in Sources */,
+				F8C593441E334BAF006887A9 /* YJKeyChain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

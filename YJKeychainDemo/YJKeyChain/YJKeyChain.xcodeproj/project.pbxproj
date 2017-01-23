@@ -16,7 +16,7 @@
 		F8AEFD431E2A0B050053CE30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AEFD411E2A0B050053CE30 /* LaunchScreen.storyboard */; };
 		F8AEFD4E1E2A0B050053CE30 /* YJKeyChainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AEFD4D1E2A0B050053CE30 /* YJKeyChainTests.m */; };
 		F8AEFD591E2A0B050053CE30 /* YJKeyChainUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AEFD581E2A0B050053CE30 /* YJKeyChainUITests.m */; };
-		F8AEFD681E2A0B1B0053CE30 /* YJKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AEFD671E2A0B1B0053CE30 /* YJKeyChain.m */; };
+		F8C593401E334B9F006887A9 /* YJKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5933F1E334B9F006887A9 /* YJKeyChain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +33,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = F8AEFD2F1E2A0B050053CE30;
 			remoteInfo = YJKeyChain;
+		};
+		F8C592D71E330E8E006887A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8C592D11E330E8E006887A9 /* AlertView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F81217821E1E400B0082EFFF;
+			remoteInfo = AlertView;
+		};
+		F8C592D91E330E8E006887A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8C592D11E330E8E006887A9 /* AlertView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F812179B1E1E400B0082EFFF;
+			remoteInfo = AlertViewTests;
+		};
+		F8C592DB1E330E8E006887A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8C592D11E330E8E006887A9 /* AlertView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F81217A61E1E400B0082EFFF;
+			remoteInfo = AlertViewUITests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -56,8 +77,9 @@
 		F8AEFD541E2A0B050053CE30 /* YJKeyChainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YJKeyChainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AEFD581E2A0B050053CE30 /* YJKeyChainUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJKeyChainUITests.m; sourceTree = "<group>"; };
 		F8AEFD5A1E2A0B050053CE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8AEFD661E2A0B1B0053CE30 /* YJKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJKeyChain.h; sourceTree = "<group>"; };
-		F8AEFD671E2A0B1B0053CE30 /* YJKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJKeyChain.m; sourceTree = "<group>"; };
+		F8C592D11E330E8E006887A9 /* AlertView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlertView.xcodeproj; path = ../AlertView/AlertView.xcodeproj; sourceTree = "<group>"; };
+		F8C5933E1E334B9F006887A9 /* YJKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJKeyChain.h; sourceTree = "<group>"; };
+		F8C5933F1E334B9F006887A9 /* YJKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJKeyChain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +114,7 @@
 				F8AEFD4C1E2A0B050053CE30 /* YJKeyChainTests */,
 				F8AEFD571E2A0B050053CE30 /* YJKeyChainUITests */,
 				F8AEFD311E2A0B050053CE30 /* Products */,
+				F8C592D11E330E8E006887A9 /* AlertView.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,10 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				F8295E8F1E30B8D000D29AFC /* YJKeyChain.entitlements */,
+				F8C5933D1E334B9F006887A9 /* DependFile */,
 				F8295E8C1E30A27900D29AFC /* UserInfo.h */,
 				F8295E8D1E30A27900D29AFC /* UserInfo.m */,
-				F8AEFD661E2A0B1B0053CE30 /* YJKeyChain.h */,
-				F8AEFD671E2A0B1B0053CE30 /* YJKeyChain.m */,
 				F8AEFD361E2A0B050053CE30 /* AppDelegate.h */,
 				F8AEFD371E2A0B050053CE30 /* AppDelegate.m */,
 				F8AEFD391E2A0B050053CE30 /* ViewController.h */,
@@ -150,6 +172,25 @@
 				F8AEFD5A1E2A0B050053CE30 /* Info.plist */,
 			);
 			path = YJKeyChainUITests;
+			sourceTree = "<group>";
+		};
+		F8C592D21E330E8E006887A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8C592D81E330E8E006887A9 /* AlertView.app */,
+				F8C592DA1E330E8E006887A9 /* AlertViewTests.xctest */,
+				F8C592DC1E330E8E006887A9 /* AlertViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8C5933D1E334B9F006887A9 /* DependFile */ = {
+			isa = PBXGroup;
+			children = (
+				F8C5933E1E334B9F006887A9 /* YJKeyChain.h */,
+				F8C5933F1E334B9F006887A9 /* YJKeyChain.m */,
+			);
+			path = DependFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +293,12 @@
 			mainGroup = F8AEFD271E2A0B050053CE30;
 			productRefGroup = F8AEFD311E2A0B050053CE30 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F8C592D21E330E8E006887A9 /* Products */;
+					ProjectRef = F8C592D11E330E8E006887A9 /* AlertView.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F8AEFD2F1E2A0B050053CE30 /* YJKeyChain */,
@@ -260,6 +307,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F8C592D81E330E8E006887A9 /* AlertView.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = AlertView.app;
+			remoteRef = F8C592D71E330E8E006887A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8C592DA1E330E8E006887A9 /* AlertViewTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlertViewTests.xctest;
+			remoteRef = F8C592D91E330E8E006887A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8C592DC1E330E8E006887A9 /* AlertViewUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlertViewUITests.xctest;
+			remoteRef = F8C592DB1E330E8E006887A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F8AEFD2E1E2A0B050053CE30 /* Resources */ = {
@@ -295,9 +366,9 @@
 			files = (
 				F8AEFD3B1E2A0B050053CE30 /* ViewController.m in Sources */,
 				F8AEFD381E2A0B050053CE30 /* AppDelegate.m in Sources */,
-				F8AEFD681E2A0B1B0053CE30 /* YJKeyChain.m in Sources */,
 				F8AEFD351E2A0B050053CE30 /* main.m in Sources */,
 				F8295E8E1E30A27900D29AFC /* UserInfo.m in Sources */,
+				F8C593401E334B9F006887A9 /* YJKeyChain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,14 +10,13 @@
 
 typedef NS_ENUM(NSInteger, YJSynStrategies){
     
-    YJSynStrategiesAfterFirstUnlock,
-    YJSynStrategiesWhenUnlocked,
-    YJSynStrategiesAlways,
-    YJSynStrategiesWhenPasscodeSetThisDeviceOnly,
-    YJSynStrategiesWhenUnlockedThisDeviceOnly,
-    YJSynStrategiesAfterFirstUnlockThisDeviceOnly,
-    YJSynStrategiesAlwaysThisDeviceOnly,
-    YJSynStrategiesNull = -1000
+    YJSynStrategiesAfterFirstUnlock,                 //当设备开机（重启）第一次解锁，item才允许访问、备份
+    YJSynStrategiesWhenUnlocked,                  //当设备解锁了，item才允许访问、备份（可在新设备上继续使用）
+    YJSynStrategiesAlways,                         //无论设备解锁与否，item总是允许访问、备份。不推荐使用
+    YJSynStrategiesWhenPasscodeSetThisDeviceOnly,  //当设备解锁了，item允许访问。如果设备设置了密码，则备份。如果设备没有设置密码，则不备份，并且不会存储该数据。
+    YJSynStrategiesWhenUnlockedThisDeviceOnly,     //当设备解锁了，item才允许访问、不备份（不可在新设备上继续使用）
+    YJSynStrategiesAfterFirstUnlockThisDeviceOnly,    //当设备开机（重启）第一次解锁，item才允许访问、不备份
+    YJSynStrategiesAlwaysThisDeviceOnly             //无论设备解锁与否，item总是允许访问、不备份
 };
 
 #pragma mark - YJKeyChainResult
@@ -42,7 +41,7 @@ typedef NS_ENUM(NSInteger, YJSynStrategies){
 #pragma mark - YJKeyChain
 @interface YJKeyChain : NSObject
 
-/** KeyChain访问策略 在保存数据前设置才会生效**/
+/** KeyChain访问策略 在保存数据前设置才会生效,默认YJSynStrategiesWhenUnlocked**/
 + (void)setSynStrategies:(YJSynStrategies)synStrategies;
 
 /********************** 保存数据 **************************/

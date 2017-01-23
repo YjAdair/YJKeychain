@@ -8,7 +8,7 @@
 
 #import "YJKeyChain.h"
 
-static YJSynStrategies synStrategiesType = YJSynStrategiesNull;
+static YJSynStrategies synStrategiesType = YJSynStrategiesWhenUnlocked;
 #pragma mark - YJKeyChainResult
 @implementation YJKeyChainResult
 @end
@@ -29,6 +29,7 @@ static YJSynStrategies synStrategiesType = YJSynStrategiesNull;
 #pragma mark - 保存操作
 - (BOOL)normalSaveFunc {
     
+    synStrategiesType = YJSynStrategiesWhenUnlocked;
     if (!self.serviceName || !self.account || !self.saveData) {
         NSLog(@"参数不能为nil");
         return NO;
@@ -38,6 +39,7 @@ static YJSynStrategies synStrategiesType = YJSynStrategiesNull;
 
 - (BOOL)codingSaveFunc {
     
+    synStrategiesType = YJSynStrategiesWhenUnlocked;
     if (![(id)self.codingData conformsToProtocol:@protocol(NSCoding)]) {
         NSLog(@"当前保存数据不符合<NSCoding>协议");
         return NO;
@@ -61,10 +63,8 @@ static YJSynStrategies synStrategiesType = YJSynStrategiesNull;
         updateQuery = [NSMutableDictionary dictionary];
         [updateQuery setObject:self.saveData forKey:(__bridge id)kSecValueData];
 #if TARGET_OS_IPHONE
-        if (synStrategiesType != YJSynStrategiesNull) {
             //设置访问策略
-            [updateQuery setObject:(__bridge id)[self synStr] forKey:(__bridge id)kSecAttrAccessible];
-        }
+        [updateQuery setObject:(__bridge id)[self synStr] forKey:(__bridge id)kSecAttrAccessible];
 #endif
         //更新
         status = SecItemUpdate((__bridge CFDictionaryRef)searchQuery, (__bridge CFDictionaryRef)updateQuery);
@@ -194,10 +194,8 @@ static YJSynStrategies synStrategiesType = YJSynStrategiesNull;
         [query setObject:self.account forKey:(__bridge id)kSecAttrAccount];
     }
 #if TARGET_OS_IPHONE
-    if (synStrategiesType != YJSynStrategiesNull) {
         //设置访问策略
-        [query setObject:(__bridge id)[self synStr] forKey:(__bridge id)kSecAttrAccessible];
-    }
+    [query setObject:(__bridge id)[self synStr] forKey:(__bridge id)kSecAttrAccessible];
 #endif
     return query;
 }
@@ -213,8 +211,6 @@ static YJSynStrategies synStrategiesType = YJSynStrategiesNull;
         case YJSynStrategiesAlwaysThisDeviceOnly:
             return kSecAttrAccessibleAlwaysThisDeviceOnly;
             break;
-        case YJSynStrategiesWhenUnlocked:
-            return kSecAttrAccessibleWhenUnlocked;
         case YJSynStrategiesAlways:
             return kSecAttrAccessibleAlways;
             break;
@@ -231,7 +227,7 @@ static YJSynStrategies synStrategiesType = YJSynStrategiesNull;
             return kSecAttrAccessibleAfterFirstUnlock;
             break;
         default:
-            return NULL;
+            return kSecAttrAccessibleWhenUnlocked;
             break;
     }
 }
